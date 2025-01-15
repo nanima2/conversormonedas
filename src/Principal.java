@@ -64,11 +64,13 @@ public class Principal {
                 System.out.println("El numero ingresado no es valido,  intente nuevamente");
                 break;
         }
-        System.out.println("digite la cantidad a cambiar");
-        double valor= consulta.nextDouble();
-        ConsultaApi consulta2=new ConsultaApi();
-        double resultado=consulta2.ConexionApi(entrada,salida,valor);
-        System.out.println(resultado);
+        if(dato>0&& dato<9) {
+            System.out.println("digite la cantidad a cambiar");
+            double valor = consulta.nextDouble();
+            ConsultaApi consulta2 = new ConsultaApi();
+            double resultado = consulta2.ConexionApi(entrada, salida, valor);
+            System.out.println("resultado de la conversion de "+entrada+"a "+salida+"es igual="+resultado);
+        }
 
     }
 }
